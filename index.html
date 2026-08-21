@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KINETIC & CO. - Bold, modern, maximalist artisanal cafe serving single-origin coffee, handcrafted food & electric good vibes.">
+  <title>KINETIC & CO. | Coffee • Chaos • Creativity</title>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo">
+          <span class="logo-badge">⚡</span>
+          <span>KINETIC & CO.</span>
+        </a>
+
+        <!-- Desktop Links -->
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="nav-actions">
+          <a href="order.html" class="cart-btn-nav">
+            <span>🛒 Order</span>
+            <span class="cart-count-badge">0</span>
+          </a>
+
+          <!-- Mobile Hamburger Trigger -->
+          <button class="hamburger-btn" id="hamburger-open-btn" aria-label="Open Mobile Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-badge">⚡</span>
+        <span>KINETIC</span>
+      </a>
+      <button class="close-drawer-btn" id="hamburger-close-btn" aria-label="Close Mobile Menu">✕</button>
+    </div>
+
+    <ul class="mobile-links">
+      <li><a href="#home">⚡ Home</a></li>
+      <li><a href="#menu">☕ Menu</a></li>
+      <li><a href="#about">📖 Our Story</a></li>
+      <li><a href="#gallery">📸 Gallery</a></li>
+      <li><a href="#contact">📍 Location</a></li>
+    </ul>
+
+    <div style="margin-top: auto; text-align: center;">
+      <a href="order.html" class="btn-maximal btn-maximal-secondary" style="width: 100%;">
+        🛒 View Order Session
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Hero Left Text Content -->
+        <div class="hero-content">
+          <div class="hero-tag-wrap">
+            <span class="badge-sticker red">EST. 2021</span>
+            <span class="badge-sticker green">100% ARTISANAL</span>
+          </div>
+
+          <h1 class="hero-title">
+            COFFEE.<br>
+            <span class="highlight-orange">CHAOS.</span><br>
+            CREATIVITY.
+          </h1>
+
+          <p class="hero-tagline">
+            Hand-roasted single-origin beans, handcrafted pastries, and electric good vibes served daily in the heart of the city.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#menu" class="btn-maximal">
+              <span>Order Now 🚀</span>
+            </a>
+            <a href="#menu" class="btn-maximal btn-maximal-secondary">
+              <span>Explore Menu 📖</span>
+            </a>
+          </div>
+
+          <div class="hero-notes">
+            <span class="text-handwritten">★ Rated 4.9/5 by 50,000+ Coffee Lovers</span>
+          </div>
+        </div>
+
+        <!-- Hero Right Visual Composition -->
+        <div class="hero-visual-card">
+          <!-- Floating Stickers -->
+          <div class="hero-sticker-1 badge-sticker orange">🔥 STAY WILD</div>
+          <div class="hero-sticker-2 badge-sticker red">☕ FRESH ROAST</div>
+
+          <div class="hero-img-wrap">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=80" alt="Kinetic Cafe Roastery Table">
+          </div>
+
+          <!-- Rotating Stamp -->
+          <div class="hero-badge-stamp">
+            <span>SMALL</span>
+            <span style="color:var(--crimson-red); font-size:1.1rem;">BATCH</span>
+            <span>ROASTED</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. ANIMATED MARQUEE / MOVING TEXT
+       ========================================================================== -->
+  <div class="marquee-container">
+    <div class="marquee-content">
+      <span class="marquee-item">FRESH COFFEE <span class="star-icon">★</span></span>
+      <span class="marquee-item">HANDCRAFTED FOOD <span class="star-icon">★</span></span>
+      <span class="marquee-item">GOOD VIBES EVERY DAY <span class="star-icon">★</span></span>
+      <span class="marquee-item">NO BORING BEANS <span class="star-icon">★</span></span>
+      <span class="marquee-item">FRESH COFFEE <span class="star-icon">★</span></span>
+      <span class="marquee-item">HANDCRAFTED FOOD <span class="star-icon">★</span></span>
+      <span class="marquee-item">GOOD VIBES EVERY DAY <span class="star-icon">★</span></span>
+      <span class="marquee-item">NO BORING BEANS <span class="star-icon">★</span></span>
+    </div>
+  </div>
+
+  <div class="marquee-container reverse">
+    <div class="marquee-content">
+      <span class="marquee-item">CHAOS & CAFFEINE <span class="star-icon">⚡</span></span>
+      <span class="marquee-item">100% SINGLE ORIGIN <span class="star-icon">⚡</span></span>
+      <span class="marquee-item">ARTISANAL PASTRY <span class="star-icon">⚡</span></span>
+      <span class="marquee-item">BREWED WITH LOVE <span class="star-icon">⚡</span></span>
+      <span class="marquee-item">CHAOS & CAFFEINE <span class="star-icon">⚡</span></span>
+      <span class="marquee-item">100% SINGLE ORIGIN <span class="star-icon">⚡</span></span>
+      <span class="marquee-item">ARTISANAL PASTRY <span class="star-icon">⚡</span></span>
+      <span class="marquee-item">BREWED WITH LOVE <span class="star-icon">⚡</span></span>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       4. ABOUT SECTION (OUR STORY)
+       ========================================================================== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Visual Story Box -->
+        <div class="about-visual">
+          <div class="about-tape-sticker">OUR SECRET SAUCE</div>
+          <div class="about-img-box">
+            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" alt="Pour over coffee masterclass">
+          </div>
+        </div>
+
+        <!-- Content Story Box -->
+        <div class="about-content">
+          <span class="section-tag">OUR STORY</span>
+          <h2 class="section-title">WE BREW CHAOS INTO ART.</h2>
+          <p class="about-p">
+            Founded in 2021, KINETIC & CO. was built for people who refuse boring routine coffee. We source single-origin specialty beans directly from micro-farms in Ethiopia, Colombia, and Guatemala, roasting every batch right in front of your eyes.
+          </p>
+          <p class="about-p">
+            Whether you need a lightning-fast double espresso before work or a slow drip cold brew surrounded by vibrant design and good tunes, we are your daily sanctuary.
+          </p>
+
+          <!-- Statistics Grid -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Years of Craft</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">50K+</div>
+              <div class="stat-label">Happy Humans</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">20+</div>
+              <div class="stat-label">Artisanal Items</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. FEATURED MENU SECTION
+       ========================================================================== -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="menu-header">
+        <span class="section-tag">EXPLORE OUR CREATIONS</span>
+        <h2 class="section-title" style="margin-top:0.8rem;">THE KINETIC MENU</h2>
+        <p style="color:var(--text-muted); font-size:1.1rem; margin-top:0.5rem;">
+          Filter by category and add your favorites straight into your order session!
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="category-tabs">
+        <button class="tab-btn active" data-category="all">⚡ All Items</button>
+        <button class="tab-btn" data-category="coffee">☕ Coffee</button>
+        <button class="tab-btn" data-category="cold-drinks">🧊 Cold Drinks</button>
+        <button class="tab-btn" data-category="desserts">🥐 Desserts</button>
+        <button class="tab-btn" data-category="snacks">🥑 Snacks</button>
+      </div>
+
+      <!-- Dynamic Menu Grid Container (Populated via script.js) -->
+      <div class="menu-grid" id="menu-grid-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. SPECIAL OFFER SECTION (WEEKEND SPECIAL)
+       ========================================================================== -->
+  <section class="special-offer-section">
+    <div class="container">
+      <div class="offer-banner-card">
+        <!-- Discount Sticker Badge -->
+        <div class="discount-badge-circle">
+          <span>30%</span>
+          <span>OFF</span>
+        </div>
+
+        <div class="offer-content">
+          <span class="badge-sticker red">🔥 LIMITED TIME DEAL</span>
+          <h2 class="offer-title">WEEKEND POWER COMBO</h2>
+          <p class="offer-subtitle">
+            Get our Signature Nitro Cold Brew paired with a freshly baked Tiramisu Croissant for 30% off!
+          </p>
+
+          <!-- Live JS Countdown Timer -->
+          <div class="timer-grid">
+            <div class="timer-box">
+              <div class="timer-value" id="timer-days">02</div>
+              <div class="timer-unit">Days</div>
+            </div>
+            <div class="timer-box">
+              <div class="timer-value" id="timer-hours">14</div>
+              <div class="timer-unit">Hours</div>
+            </div>
+            <div class="timer-box">
+              <div class="timer-value" id="timer-mins">35</div>
+              <div class="timer-unit">Mins</div>
+            </div>
+            <div class="timer-box">
+              <div class="timer-value" id="timer-secs">42</div>
+              <div class="timer-unit">Secs</div>
+            </div>
+          </div>
+
+          <button class="btn-maximal btn-maximal-dark" onclick="addToCart('item-4'); addToCart('item-8');">
+            <span>Claim Combo ($10.50) 🚀</span>
+          </button>
+        </div>
+
+        <div class="offer-visual">
+          <div class="offer-img-box">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80" alt="Nitro Cold Brew Special Combo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. MASONRY PHOTO GALLERY
+       ========================================================================== -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <span class="section-tag">INSTAGRAM & VIBES</span>
+        <h2 class="section-title" style="margin-top:0.8rem;">CAFE GALLERY</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Artisanal Espresso Machine">
+          <div class="gallery-overlay">
+            <h3 class="gallery-title">Espresso Bar</h3>
+            <p>Custom Synesso MVP Machine</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Latte Art Cup">
+          <div class="gallery-overlay">
+            <h3 class="gallery-title">Latte Art Studio</h3>
+            <p>Velvety Micro-foam Magic</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Pour Over Coffee Drip">
+          <div class="gallery-overlay">
+            <h3 class="gallery-title">V60 Pour Over</h3>
+            <p>Single-Origin Ethiopian Yirgacheffe</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=600&q=80" alt="Cold Brew Glasses">
+          <div class="gallery-overlay">
+            <h3 class="gallery-title">Cold Brew Vault</h3>
+            <p>Steeped for 18 Hours</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1507138086030-616c3b6db768?auto=format&fit=crop&w=600&q=80" alt="Pastry Showcase">
+          <div class="gallery-overlay">
+            <h3 class="gallery-title">French Croissants</h3>
+            <p>Baked Fresh at 6:00 AM</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80" alt="Cafe Interior Seating">
+          <div class="gallery-overlay">
+            <h3 class="gallery-title">Cozy Corner</h3>
+            <p>High-Speed Wi-Fi & Electric Vibes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. WHY CHOOSE US (FEATURES)
+       ========================================================================== -->
+  <section class="why-us-section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3.5rem;">
+        <span class="section-tag">WHY WE STAND OUT</span>
+        <h2 class="section-title" style="margin-top:0.8rem;">THE KINETIC DIFFERENCE</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">🌱</div>
+          <h3 class="feature-title">Fresh Organic Beans</h3>
+          <p class="feature-desc">Direct-trade 100% Arabica beans ethically sourced from high-altitude micro-farms worldwide.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">🏆</div>
+          <h3 class="feature-title">Master Baristas</h3>
+          <p class="feature-desc">Award-winning baristas passionate about temperature control, extraction science & pour art.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">✨</div>
+          <h3 class="feature-title">Cozy Electric Vibe</h3>
+          <p class="feature-desc">A vibrant aesthetic atmosphere with energetic music, vintage posters & comfortable lounge seating.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">⚡</div>
+          <h3 class="feature-title">Lightning Express</h3>
+          <p class="feature-desc">Seamless pickup & express mobile ordering so you never lose a minute of your busy morning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. CUSTOMER REVIEWS (SLIDER)
+       ========================================================================== -->
+  <section class="reviews-section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <span class="section-tag">TESTIMONIALS</span>
+        <h2 class="section-title" style="margin-top:0.8rem;">WHAT OUR HUMANS SAY</h2>
+      </div>
+
+      <div class="testimonial-carousel">
+        <div class="testimonial-track-wrap">
+          <div class="testimonial-track" id="testimonial-track">
+            <!-- Slide 1 -->
+            <div class="testimonial-slide">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Sophia Chen" class="reviewer-avatar">
+              <div class="star-rating">★★★★★</div>
+              <p class="quote-text">
+                "Hands down the best Spanish Latte in NYC. The energy in this cafe is unmatched — maximalist visual perfection and the soufflé pancakes are divine!"
+              </p>
+              <div class="reviewer-name">Sophia Chen — Product Designer</div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="testimonial-slide">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Marcus Vance" class="reviewer-avatar">
+              <div class="star-rating">★★★★★</div>
+              <p class="quote-text">
+                "I come here every single morning for the Nitro Cold Brew. The ordering flow is so smooth and the staff remembers my order before I even reach the counter."
+              </p>
+              <div class="reviewer-name">Marcus Vance — Creative Director</div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="testimonial-slide">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80" alt="Elena Rostova" class="reviewer-avatar">
+              <div class="star-rating">★★★★★</div>
+              <p class="quote-text">
+                "The Tiramisu Croissants are a work of art! Beautiful coffee, incredible music, and friendly baristas who actually care about craft coffee."
+              </p>
+              <div class="reviewer-name">Elena Rostova — Food Journalist</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+          <button class="slider-btn" id="slider-prev-btn" aria-label="Previous Review">←</button>
+          <div class="slider-dots" id="slider-dots-container"></div>
+          <button class="slider-btn" id="slider-next-btn" aria-label="Next Review">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. LOCATION & CONTACT SECTION
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3.5rem;">
+        <span class="section-tag">FIND US</span>
+        <h2 class="section-title" style="margin-top:0.8rem;">VISIT THE HQ</h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Info Card -->
+        <div class="contact-info-card">
+          <div>
+            <h3 style="font-size:2rem; color:var(--butter-yellow); margin-bottom:2rem;">KINETIC & CO.</h3>
+            
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <div class="info-text">
+                <h4>LOCATION</h4>
+                <p>420 Roasters Avenue, Kinetic District<br>New York, NY 10012</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">⏰</div>
+              <div class="info-text">
+                <h4>OPENING HOURS</h4>
+                <p>Mon - Fri: 7:00 AM – 8:00 PM<br>Sat - Sun: 8:00 AM – 10:00 PM</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">📞</div>
+              <div class="info-text">
+                <h4>GET IN TOUCH</h4>
+                <p>+1 (555) 849-2021<br>hello@kineticcafe.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:2rem;">
+            <div class="badge-sticker orange" style="width:100%; text-align:center;">
+              ⚡ DINE-IN • TAKEAWAY • DELIVERY
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Message Form -->
+        <div class="contact-form-card">
+          <h3 style="font-size:1.8rem; margin-bottom:1.5rem;">SEND A MESSAGE</h3>
+
+          <form onsubmit="event.preventDefault(); alert('Message sent successfully! We will get back to you shortly.'); this.reset();">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Rivera" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="alex@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Message</label>
+              <textarea id="contact-message" class="form-textarea" rows="4" placeholder="Tell us what's on your mind..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-maximal" style="width:100%;">
+              <span>Send Message 🚀</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>⚡ KINETIC & CO.</h3>
+          <p>
+            Artisanal coffee roastery & cafe crafting bold brews, savory dishes, and creative culture every single day.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Instagram">IG</a>
+            <a href="#" class="social-btn" aria-label="TikTok">TT</a>
+            <a href="#" class="social-btn" aria-label="Twitter">TW</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>QUICK LINKS</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="order.html">Order Online</a></li>
+            <li><a href="admin.html">🔐 Admin Panel</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>CATEGORIES</h4>
+          <ul class="footer-links">
+            <li><a href="#menu">Espresso & Coffee</a></li>
+            <li><a href="#menu">Cold Drinks & Elixirs</a></li>
+            <li><a href="#menu">Artisanal Pastries</a></li>
+            <li><a href="#menu">Sourdough Toast & Snacks</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>NEWSLETTER</h4>
+          <p style="color:#BBB; font-size:0.9rem; margin-bottom:1rem;">
+            Subscribe for 15% off your first online order & secret weekend specials.
+          </p>
+          <form onsubmit="event.preventDefault(); alert('Subscribed to newsletter!'); this.reset();" style="display:flex; gap:0.5rem;">
+            <input type="email" class="form-input" placeholder="Your email..." required style="padding:0.6rem; font-size:0.85rem;">
+            <button type="submit" class="btn-maximal" style="padding:0.6rem 1rem;">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 KINETIC & CO. Cafe Roasters. All rights reserved. Crafted with Maximalist Passion.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Floating Button -->
+  <button class="back-to-top-btn" id="back-to-top-btn" aria-label="Back to Top">↑</button>
+
+  <!-- JavaScript File -->
+  <script src="js/script.js"></script>
+</body>
+</html>

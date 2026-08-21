@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KINETIC & CO. - Order Online. Customize your coffee, snacks & pastries for express pickup or fast delivery.">
+  <title>Checkout & Order | KINETIC & CO.</title>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       ORDER PAGE HEADER
+       ========================================================================== -->
+  <header class="order-header-bar">
+    <div class="container">
+      <div class="order-header-inner">
+        <a href="index.html" class="brand-logo">
+          <span class="logo-badge">⚡</span>
+          <span>KINETIC & CO.</span>
+        </a>
+
+        <a href="index.html#menu" class="btn-maximal btn-maximal-secondary" style="padding: 0.6rem 1.2rem; font-size:0.9rem;">
+          ← Back to Cafe Menu
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-bottom: 5rem;">
+
+    <!-- ==========================================================================
+         ACCESS DENIED GATE VIEW (Shown when cart is empty)
+         ========================================================================== -->
+    <div class="access-denied-card" id="access-denied-view" style="display: none;">
+      <div class="access-icon">🛒⚠️</div>
+      <span class="badge-sticker red" style="margin-bottom: 1rem;">ACCESS RESTRICTED</span>
+      <h2 style="font-size: 2.2rem; margin: 1rem 0;">YOUR ORDER SESSION IS EMPTY!</h2>
+      <p style="color: var(--text-muted); max-width: 480px; margin: 0 auto 2rem auto; font-size: 1.1rem;">
+        You haven't selected any items yet. Please explore our artisanal coffee, pastries & food menu to start your order session.
+      </p>
+      <a href="index.html#menu" class="btn-maximal">
+        <span>Browse Cafe Menu Now ☕</span>
+      </a>
+    </div>
+
+    <!-- ==========================================================================
+         ACTIVE ORDER CHECKOUT VIEW (Shown when cart has items)
+         ========================================================================== -->
+    <div class="order-layout-grid" id="order-active-view">
+
+      <!-- LEFT COLUMN: CART SUMMARY ITEMS -->
+      <div class="order-items-card">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.5rem;">
+          <h2 style="font-size:1.8rem;">YOUR ORDER SESSION</h2>
+          <button onclick="clearAllCart()" class="badge-sticker red" style="cursor:pointer;">Clear All ✕</button>
+        </div>
+
+        <!-- Rendered Cart Table Rows -->
+        <div class="cart-table-wrap" id="cart-items-container">
+          <!-- Dynamically populated via script.js -->
+        </div>
+
+        <!-- Cost Calculation Summary -->
+        <div class="summary-rows">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="summary-subtotal">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Estimated Tax (8%)</span>
+            <span id="summary-tax">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Delivery Fee</span>
+            <span id="summary-delivery">$3.99</span>
+          </div>
+          <div class="summary-row grand-total">
+            <span>GRAND TOTAL</span>
+            <span id="summary-grand-total">$0.00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: CUSTOMER FORM & CHECKOUT -->
+      <div class="order-checkout-card">
+        <h2 style="font-size:1.8rem; margin-bottom:1.5rem;">CHECKOUT DETAILS</h2>
+
+        <form id="checkout-form">
+          <!-- Order Type Switcher -->
+          <label class="form-label">Order Type</label>
+          <div class="order-type-toggle">
+            <button type="button" class="order-type-btn active" data-type="delivery">🚚 Delivery</button>
+            <button type="button" class="order-type-btn" data-type="pickup">☕ Pickup</button>
+          </div>
+
+          <!-- Customer Info Fields -->
+          <div class="form-group">
+            <label class="form-label" for="cust-name">Full Name *</label>
+            <input type="text" id="cust-name" class="form-input" placeholder="e.g. Jordan Miller" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cust-phone">Phone Number *</label>
+            <input type="tel" id="cust-phone" class="form-input" placeholder="+1 (555) 000-0000" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cust-email">Email Address *</label>
+            <input type="email" id="cust-email" class="form-input" placeholder="jordan@example.com" required>
+          </div>
+
+          <!-- Dynamic Delivery Address Group -->
+          <div class="form-group" id="delivery-address-group">
+            <label class="form-label" for="cust-address">Delivery Address *</label>
+            <input type="text" id="cust-address" class="form-input" placeholder="Street name, Apt #, City, Zip">
+          </div>
+
+          <!-- Pickup Note Box (Hidden by default) -->
+          <div id="pickup-info-box" style="display:none; background:var(--bg-cream); border:var(--border-thin); padding:1rem; border-radius:var(--radius-md); margin-bottom:1.5rem;">
+            <p style="font-weight:700; font-size:0.9rem; color:var(--espresso-dark);">
+              📍 Pickup Counter: 420 Roasters Avenue, Kinetic District, NY 10012
+            </p>
+            <p style="font-size:0.85rem; color:var(--text-muted);">Your order will be ready at the express pickup counter in 15–20 minutes.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cust-instructions">Special Instructions</label>
+            <textarea id="cust-instructions" class="form-textarea" rows="2" placeholder="e.g. Extra hot milk, less ice, leave at front door..."></textarea>
+          </div>
+
+          <!-- Payment Options -->
+          <label class="form-label">Payment Method</label>
+          <div class="payment-options-grid">
+            <label class="payment-card-option active">
+              <input type="radio" name="payment_method" value="cod" checked>
+              <div style="font-size:1.4rem;">💵</div>
+              <div style="font-weight:800; font-size:0.8rem;">CASH</div>
+            </label>
+
+            <label class="payment-card-option">
+              <input type="radio" name="payment_method" value="upi">
+              <div style="font-size:1.4rem;">📱</div>
+              <div style="font-weight:800; font-size:0.8rem;">UPI / QR</div>
+            </label>
+
+            <label class="payment-card-option">
+              <input type="radio" name="payment_method" value="card">
+              <div style="font-size:1.4rem;">💳</div>
+              <div style="font-weight:800; font-size:0.8rem;">CARD</div>
+            </label>
+          </div>
+
+          <button type="submit" class="btn-maximal" style="width:100%;">
+            <span>PLACE ORDER 🚀</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       ORDER CONFIRMATION MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="order-modal-backdrop">
+    <div class="confirmation-modal-card">
+      <div class="modal-check-badge">✓</div>
+      <span class="badge-sticker green" style="margin-bottom:1rem;">ORDER CONFIRMED</span>
+      
+      <h2 style="font-size:2rem; margin:0.8rem 0;">THANK YOU FOR YOUR ORDER!</h2>
+      
+      <p style="font-size:1.1rem; color:var(--text-muted); margin-bottom:1.5rem;">
+        Your order number is <strong id="modal-order-number" style="color:var(--crimson-red); font-family:var(--font-heading);">#CAF-8492</strong>.
+      </p>
+
+      <div style="background:var(--butter-yellow); border:var(--border-thick); border-radius:var(--radius-md); padding:1rem; margin-bottom:2rem; font-weight:800; font-family:var(--font-heading);">
+        ⏱ Estimated Time: 25 – 35 Mins
+      </div>
+
+      <button class="btn-maximal btn-maximal-dark" id="modal-close-btn" style="width:100%;">
+        <span>Back to Home 🏠</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="js/script.js"></script>
+</body>
+</html>
